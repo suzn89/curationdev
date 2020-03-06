@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/custom.js"></script>
+</head>
+<body>
+  
+  <style>
+    .eventList {
+  width: 100%;
+  height: calc(100vh - 280px);
+  border: 1px solid #3f3f3f;
+}
+
+.eventList .overview {
+  width: 100%;
+}
+
+.eventList .star {
+  display: block;
+  margin-top: 4px;
+  width: 40px;
+  height: 12px;
+  background: url(../images/star0.png) no-repeat;
+  background-size: contain;
+}
+
+.eventList .star.num1 {
+  background: url(../images/star1.png) no-repeat;
+  background-size: contain;
+}
+
+.eventList .star.num2 {
+  background: url(../images/star2.png) no-repeat;
+  background-size: contain;
+}
+
+.eventList .star.num3 {
+  background: url(../images/star3.png) no-repeat;
+  background-size: contain;
+}
+
+.eventList .category {
+  position: relative;
+  background: #262626;
+  width: 100%;
+  border-top: 1px solid #3f3f3f;
+  border-bottom: 1px solid #3f3f3f;
+  padding: 10px;
+}
+
+.eventList .category + .category {
+  margin-top: 8px;
+}
+
+.eventList .category .slidedown {
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  top: 26px;
+  background: url(../images/arrow_down.png) no-repeat;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+}
+
+.eventList .category .sub {
+  display: none;
+  background: #111111;
+  margin-top: 8px;
+}
+
+.eventList .category .sub .dropdown {
+  width: 100%;
+  overflow: hidden;
+}
+
+.eventList .category .sub .dropdown .eventList .input__form {
+  vertical-align: top;
+}
+
+.eventList .category .sub .dropdown .col2 {
+  display: inline-block;
+  width: calc(50% - 4px);
+}
+
+.eventList .category .sub .dropdown .col2 + .col2 {
+  margin-left: 3px;
+  width: calc(50% - 4px);
+}
+
+.eventList .category .sub .dropdown > li {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid #f48438;
+}
+
+.eventList .category .sub .dropdown > li .count li {
+  text-align: right;
+}
+
+.eventList .category .sub .dropdown > li .count li:after {
+  content: '건';
+  margin-left: 2px;
+}
+
+.eventList .category .sub .dropdown > li + li {
+  margin-top: 4px;
+}
+
+.eventList .category > ul {
+  width: calc(100% - 15px);
+  overflow: hidden;
+}
+
+.eventList .category ul > li {
+  float: left;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.eventList li ul > li.count {
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.eventList li ul > li.count:after {
+  content: '건';
+  font-size: 14px;
+  margin-left: 4px;
+}
+.eventList .input__form {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.eventList .input__form input[type='checkbox'], .eventList .input__form input[type='radio'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  -webkit-appearance: none;
+  clip: rect(0, 0, 0, 0);
+}
+
+.eventList .input__form input[type='checkbox'] + label {
+  display: inline-block;
+  height: 17px;
+  line-height: 16px;
+  padding: 0 0 0 17px;
+  margin-right: 0px;
+  font-size: 13px;
+  background: url(../images/chk_normal.png) no-repeat left center;
+  cursor: pointer;
+  background-size: 15px;
+}
+
+.eventList .input__form input[type='checkbox']:checked + label {
+  background: url(../images/chk_checked.png) no-repeat left center;
+  background-size: 15px;
+}
+
+.eventList .input__form input[type='checkbox']:checked:disabled + label {
+  background: url(../images/check_chkdis.png) no-repeat left center;
+  background-size: 15px;
+}
+
+.eventList .input__form input[type='checkbox']:disabled + label {
+  background: url(../images/chk_disable.png) no-repeat left center;
+  background-size: 15px;
+}
+
+  </style>
+  <ul class="eventList">      
+    <li class="category">        
+      <ul>
+        <li>열감지<span class="star"></span></li>
+        <li class="count">3</li>
+      </ul>
+      <!-- 드롭다운 위 선택 있을 시 시작 -->
+      <a href="#" class="slidedown"><span class="blind">펼치기</span></a>
+      <div class="sub">
+        <ul class="dropdown">
+          <li>
+            <div class="input__form col2">
+              <input type="checkbox" name="" id="check01">
+              <label for="check01">사람</label>
+            </div>
+            <ul class="count col2">
+              <li>87654</li>
+              <li>87654</li>
+            </ul>
+          </li>
+          <li>
+            <div class="input__form col2">
+              <input type="checkbox" name="" id="check01">
+              <label for="check01">사람</label>
+            </div>
+            <ul class="count col2">
+              <li>87654</li>
+              <li>87654</li>
+            </ul>
+          </li>
+          <li>
+            <div class="input__form col2">
+              <input type="checkbox" name="" id="check01">
+              <label for="check01">사람</label>
+            </div>
+            <ul class="count col2">
+              <li>87654</li>
+              <li>87654</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- 드롭다운 끝 -->
+    </li>
+    <li class="category">
+      <ul>
+        <li>열감지<span class="star num1"></span></li>
+        <li class="count">3</li>
+      </ul>        
+    </li>
+    <li class="category">
+      <ul>
+        <li>열감지<span class="star num2"></span></li>
+        <li class="count">3</li>
+      </ul>
+    </li>
+    <li class="category">
+      <ul>
+        <li>열감지<span class="star num3"></span></li>
+        <li class="count">3</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

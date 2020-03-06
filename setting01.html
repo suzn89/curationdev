@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="plugin/jquery.custom-scrollbar.js"></script>
+  <link type="text/css" rel="stylesheet" href="plugin/jquery.custom-scrollbar.css"/>
+  
+<script>
+  $(window).load(function() {
+    $(".customscroll").customScrollbar({
+      skin: "default-skin", 
+      hScroll: false,
+      updateOnWindowResize: true
+    })
+  });
+</script>
+</head>
+<body>
+  <div class="settingwrap">
+    <ul class="tab">
+      <li><a href="#">알고리즘 옵션</a></li>
+      <li><a href="#">알람 옵션</a></li>
+      <li class="active"><a href="#">VMS 정보 관리</a></li>
+      <li><a href="#">선별서버 관리</a></li>
+      <li><a href="#">분석서버 관리</a></li>
+    </ul>
+    <div class="settingBox">
+      <div class="btnArea ar">    
+        <a href="#" class="btn__orange">신규등록</a>
+        <a href="#" class="btn__orangesolid">Exel저장</a>
+        <a href="#" class="btn__gray">신규등록</a>  
+        <a href="#" class="btn__graysolid">신규등록</a>  
+        <a href="#" class="btn__cancle">취소</a>    
+      </div>
+    </div>
+  </div> <!-- settingWrap -->
+</body>
+</html>

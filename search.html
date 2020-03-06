@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="plugin/jquery.custom-scrollbar.js"></script>
+  <link type="text/css" rel="stylesheet" href="plugin/jquery.custom-scrollbar.css"/>
+  
+<script>
+  $(window).load(function() {
+    $(".customscroll").customScrollbar({
+      skin: "default-skin", 
+      hScroll: false,
+      updateOnWindowResize: true
+    })
+  });
+</script>
+</head>
+<body>
+<div class="sidePanel pushLeft">  
+  <h2 class="sidePanel__title">이벤트조회</h2>
+  <div class="searchBox">
+    <div class="input__form">
+      <span class="form_tit">VMS 서버</span>
+      <select name="" id="" title="해당항목선택">
+        <option value="">선택 1</option>
+        <option value="">선택 2</option>
+        <option value="">선택 3</option>
+      </select>
+    </div>    
+    <div class="input__form">
+      <label for="name" class="form_tit">카메라 ID</label>
+      <input type="text" id="name" value="">
+    </div>
+
+    <div class="input__form cal">
+      <label for="name" class="form_tit">발생기간</label>
+      <input type="text" id="name" value="">
+      <button class="btn_cal"><span class="blind">검색</span></button>
+      <span class="from">~</span>      
+    </div>
+    <div class="input__form cal mt5">
+      <input type="text" id="name" value="">
+      <button class="btn_cal"><span class="blind">검색</span></button>          
+    </div>
+    <div class="btnArea ar">
+      <a href="#" class="btn__orange">조회</a>    
+    </div>
+  </div>  
+</div> <!-- sidePanel pushLeft -->
+
+<div class="mainWrap">
+  <h2 class="mainWrap__title">이벤트 목록</h2>  
+  <div class="mainWrap__inner tablein"> 
+    <div class="tableINfo">
+      <ul>
+        <li>선택<span class="sel">1</span>건</li>
+        <li>전체<span>10</span>건</li>
+      </ul>
+      <div class="btnArea ar">
+        <a href="#" class="btn__gray">엑셀Upload</a>
+        <a href="#" class="btn__gray">삭제</a>
+        <a href="#" class="btn__orange view_more">카메라 및 ROI 신규등록</a>
+        <a href="#" class="btn__orangesolid">분석저장</a>
+      </div>          
+    </div>       
+    <div class="tablewrap">      
+      <div class="divTable">        
+        <div class="theader">
+          <div class="table_header checkcell"></div>
+          <div class="table_header">No</div>
+          <div class="table_header">VMS ID</div>
+          <div class="table_header">VMS명</div>
+          <div class="table_header">IP-Adress</div>
+          <div class="table_header">Port</div>
+          <div class="table_header">Interop IP</div>
+          <div class="table_header">Interop Port</div>
+          <div class="table_header">Max-Connection</div>
+        </div>
+  
+        <div class="table_row">
+          <div class="table_cell checkcell">
+            <div class="input__form">
+              <input type="checkbox" name="" id="check01">
+              <label for="check01" class="blind">선택</label>
+            </div>
+          </div>
+          <div class="table_cell">1</div>
+          <div class="table_cell"><a href="#" class="view_more">administrator</a></div>
+          <div class="table_cell">VMS</div>
+          <div class="table_cell">192.168.100.100</div>
+          <div class="table_cell">8738</div>
+          <div class="table_cell">192.168.100.112</div>
+          <div class="table_cell">8765</div>
+          <div class="table_cell">0</div>
+        </div><!-- // table_row -->
+  
+        <div class="table_row">
+          <div class="table_cell checkcell">
+            <div class="input__form">
+              <input type="checkbox" name="" id="check01">
+              <label for="check01" class="blind">선택</label>
+            </div>
+          </div>
+          <div class="table_cell">1</div>
+          <div class="table_cell"><a href="#" class="view_more">administrator</a></div>
+          <div class="table_cell">VMS</div>
+          <div class="table_cell">192.168.100.100</div>
+          <div class="table_cell">8738</div>
+          <div class="table_cell">192.168.100.112</div>
+          <div class="table_cell">8765</div>
+          <div class="table_cell">0</div>
+        </div><!-- // table_row -->
+  
+  
+      </div> <!-- // divTable -->      
+    </div><!-- table wrap -->     
+  </div> <!-- tablein end -->  
+  <div class="pageNation">
+    <ul>
+      <li><a href="#" class="first"><span class="blind">처음으로</span></a></li>
+      <li><a href="#" class="prev"><span class="blind">이전</span></a></li>
+      <li><a href="#" class="current">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+      <li><a href="#" class="next"><span class="blind">다음</span></a></li>
+      <li><a href="#" class="end"><span class="blind">맨끝으로</span></a></li>
+    </ul>
+  </div><!-- // pageNation -->
+</div> <!-- mainWrap -->
+
+<div class="sidePanel pushRight">
+  <a href="#" class="rightSlide"><span class="close">닫기</span></a>
+  <h2 class="sidePanel__title">이벤트 상세</h2>
+  <div class="innerBox">
+    <div class="col2 widthimg">
+      <img src="images/test_img.jpg" style="width: 100%;">
+      <table class="basic">
+        <colgroup>
+          <col width="30%">
+          <col width="*">
+        </colgroup>
+        <tr>
+          <th>카메라정보</th>
+          <td>DUMMY_#12_255(ID:5755)</td>
+        </tr>
+        <tr>
+          <th>개소명</th>
+          <td>Defalt Site</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col2 cf">
+      <table class="basic imagebasic">
+        <colgroup>
+          <col width="30%">
+          <col width="*">
+        </colgroup>
+        <tr>
+          <th>이벤트 타입</th>
+          <td>객체 탐지</td>
+        </tr>
+        <tr>
+          <th>이벤트 발생일시</th>
+          <td>2020-02-12 09:09:18</td>
+        </tr>
+        <tr>
+          <th>처리상태</th>
+          <td>
+            <div class="input__form">
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>처리자</th>
+          <td>Defalt Site</td>
+        </tr>
+        <tr>
+          <th>보고내용</th>
+          <td>
+            <div class="input__form">
+              <textarea name="" rows="3"></textarea>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>    
+    <div class="btnArea ar">
+      <a href="#" class="btn__orange">저장</a>    
+    </div>
+  </div>
+  
+</div> <!--  sidePanel pushRight -->
+<div class="popupWrap">
+  <div class="layerpopup style2">
+    <div class="layerpopup__top">
+      <h4>ROI설정</h4>
+      <a href="#" class="popup__close">닫기</a>
+    </div>
+    <div class="layerpopup__content">
+      <div class="left">
+        <div class="roiArea">
+          <img src="images/testimg.png" alt="">
+          <div class="roiArea__position">
+            <p>Mouse Position : (<span>280 , 470</span>)</p>
+          </div>
+        </div> <!-- roiArea -->
+        <div class="roiInfo">
+          <h5>ROI 정보</h5>
+          <ul>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">ROI</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">선택 1</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">알고리즘</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">객체탐지</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form etc_inp">
+                <label for="name" class="form_tit">ROI 정보</label>
+                <input type="text" id="name" class="roiput">
+                <button class="check">초기화</button>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">ROI</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">선택 1</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">알고리즘</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">객체탐지</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form etc_inp">
+                <label for="name" class="form_tit">ROI 정보</label>
+                <input type="text" id="name" class="roiput">
+                <button class="check">초기화</button>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">ROI</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">선택 1</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form">
+                <span class="form_tit">알고리즘</span>
+                <select name="" id="" title="해당항목선택">
+                  <option value="">객체탐지</option>
+                  <option value="">선택 2</option>
+                  <option value="">선택 3</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <div class="input__form etc_inp">
+                <label for="name" class="form_tit">ROI 정보</label>
+                <input type="text" id="name" class="roiput">
+                <button class="check">초기화</button>
+              </div>
+            </li>
+          </ul>
+        </div> <!-- roiINfo -->
+
+      </div> <!-- // left -->
+      <div class="right">
+        <h5>기본정보</h5>
+        <div class="right__inner">
+          <div class="item">            
+            <div class="input__form col2">
+              <span class="form_tit">선별서버</span>
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>
+            </div>
+            <div class="input__form col2">
+              <span class="form_tit">VMS 서버</span>
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>
+            </div>
+            <div class="input__form col2">
+              <span class="form_tit">그룹</span>
+              <select name="" id="" title="해당항목선택">
+                <option value="">선택 1</option>
+                <option value="">선택 2</option>
+                <option value="">선택 3</option>
+              </select>
+            </div>
+          </div> <!-- // item end -->
+        </div>
+
+        <h5>카메라정보</h5>
+        <div class="right__inner">
+          <div class="input__form col2">
+            <label for="name" class="form_tit">카메라 ID</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">관리코드</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">카메라명</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">IP</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Port</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">저장서버 ID</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">ID</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Password</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Longitude</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Latitude</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Altitude</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">Description</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">PresetPTZ</label>
+            <input type="text" id="name" value="">
+          </div>
+          <div class="input__form col2">
+            <span class="form_tit">PTZ 사용여부</span>
+            <input type="radio" name="use" id="use1" checked>
+            <label for="use1">사용</label>
+            <input type="radio" name="use" id="use2">
+            <label for="use2">미사용</label>
+          </div>
+          
+          <div class="input__form col2">
+            <span class="form_tit">모드</span>
+            <input type="radio" name="use" id="use1" checked>
+            <label for="use1">Global</label>
+            <input type="radio" name="use" id="use2">
+            <label for="use2">Channel</label>
+          </div>
+          
+        </div>
+        <div class="btnArea ar pd10">
+          <a href="#" class="btn__gray">취소</a>
+          <a href="#" class="btn__orange">등록</a>
+        </div>
+      </div> <!-- // right -->     
+
+      
+      
+    </div> <!-- // 팝업 컨텐츠 끝-->
+  </div>
+</div>
+</body>
+</html>

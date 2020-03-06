@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="plugin/jquery.custom-scrollbar.js"></script>
+  <link type="text/css" rel="stylesheet" href="plugin/jquery.custom-scrollbar.css" />
+
+  <script>
+    $(window).load(function () {
+      $(".customscroll").customScrollbar({
+        skin: "default-skin",
+        hScroll: false,
+        updateOnWindowResize: true
+      })
+    });
+  </script>
+</head>
+
+<body>
+  <p class="guide">테이블정보</p>
+  <div class="tableInfo">
+    <ul>
+      <li><span class="sel">1</span></li>
+      <li><span>10</span></li>
+    </ul>
+  </div>
+  <p class="guide">div Table - with checkbox</p>
+
+  <br>
+  <div class="tablewrap">
+    <div class="divTable">
+      <div class="theader">
+        <div class="table_header checkcell"></div>
+        <div class="table_header">No</div>
+        <div class="table_header">VMS ID</div>
+        <div class="table_header">VMS명</div>
+        <div class="table_header">IP-Adress</div>
+        <div class="table_header">Port</div>
+        <div class="table_header">Interop IP</div>
+        <div class="table_header">Interop Port</div>
+        <div class="table_header">Max-Connection</div>
+      </div>
+
+      <div class="table_row">
+        <div class="table_cell checkcell">
+          <div class="input__form">
+            <input type="checkbox" name="" id="check01">
+            <label for="check01" class="blind">선택</label>
+          </div>
+        </div>
+        <div class="table_cell">1</div>
+        <div class="table_cell"><a href="#" class="view_more">administrator</a></div>
+        <div class="table_cell">VMS</div>
+        <div class="table_cell">192.168.100.100</div>
+        <div class="table_cell">8738</div>
+        <div class="table_cell">192.168.100.112</div>
+        <div class="table_cell">8765</div>
+        <div class="table_cell">0</div>
+      </div><!-- // table_row -->
+
+      <div class="table_row">
+        <div class="table_cell checkcell">
+          <div class="input__form">
+            <input type="checkbox" name="" id="check01">
+            <label for="check01" class="blind">선택</label>
+          </div>
+        </div>
+        <div class="table_cell">1</div>
+        <div class="table_cell"><a href="#" class="view_more">administrator</a></div>
+        <div class="table_cell">VMS</div>
+        <div class="table_cell">192.168.100.100</div>
+        <div class="table_cell">8738</div>
+        <div class="table_cell">192.168.100.112</div>
+        <div class="table_cell">8765</div>
+        <div class="table_cell">0</div>
+      </div><!-- // table_row -->
+
+
+    </div> <!-- // divTable -->
+  </div><!-- table wrap -->
+
+  <p class="guide">페이징</p>
+  <div class="pageNation">
+    <ul>
+      <li><a href="#" class="first"><span class="blind">처음으로</span></a></li>
+      <li><a href="#" class="prev"><span class="blind">이전</span></a></li>
+      <li><a href="#" class="current">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+      <li><a href="#" class="next"><span class="blind">다음</span></a></li>
+      <li><a href="#" class="end"><span class="blind">맨끝으로</span></a></li>
+    </ul>
+  </div><!-- // pageNation -->
+
+  <div class="btnArea">
+    <a href="#" class="btn__orange">동기화</a>
+    <a href="#" class="btn__orangesolid">Exel저장</a>
+    <a href="#" class="btn__gray">신규등록</a>
+    <a href="#" class="btn__graysolid">신규등록</a>
+  </div>
+  <p class="guide">Buttons - 버튼좌측 정렬 class="btnArea al"</p>
+  <div class="btnArea al">
+    <a href="#" class="btn__orange">동기화</a>
+    <a href="#" class="btn__orangesolid">Exel저장</a>
+    <a href="#" class="btn__gray">신규등록</a>
+    <a href="#" class="btn__graysolid">신규등록</a>
+  </div>
+  <p class="guide">Buttons - 버튼 가운데 정렬 class="btnArea ac"</p>
+  <div class="btnArea ac">
+    <a href="#" class="btn__orange">동기화</a>
+    <a href="#" class="btn__orangesolid">Exel저장</a>
+    <a href="#" class="btn__gray">신규등록</a>
+    <a href="#" class="btn__graysolid">신규등록</a>
+  </div>
+
+  <p class="guide">Buttons - 버튼 오른쪽 정렬 class="btnArea ar"</p>
+  <div class="btnArea ar">
+    <a href="#" class="btn__orange">동기화</a>
+    <a href="#" class="btn__orangesolid">Exel저장</a>
+    <a href="#" class="btn__gray">신규등록</a>
+    <a href="#" class="btn__graysolid">신규등록</a>
+  </div>
+
+  <p class="guide">Buttons - 버튼 양쪽 정렬 class="btnArea justify"</p>
+  <div class="btnArea justify">
+    <a href="#" class="btn__orange fl">동기화</a>
+    <a href="#" class="btn__orangesolid fl">Exel저장</a>
+    <a href="#" class="btn__gray fr">신규등록</a>
+    <a href="#" class="btn__graysolid fr">신규등록</a>
+  </div>
+
+
+
+  <p class="guide">레이어팝업</p>
+  <div class="btnArea al">
+    <a href="#" class="btn__gray view_more">팝업보기</a>
+  </div>
+  <div class="popupWrap">
+    <div class="layerpopup style1">
+      <div class="layerpopup__top">
+        <h4>라이선스 등록</h4>
+        <a href="#" class="popup__close">닫기</a>
+      </div>
+      <div class="layerpopup__content">
+        <div class="item">
+          <div class="input__form col2">
+            <span class="form_tit bullet">필수항목인풋</span>
+            <input type="text" id="name" value="셀렉트박스 입력완료" disabled>
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">입력완료시</label>
+            <input type="text" id="name" value="disabled시" disabled>
+          </div>
+          <div class="input__form col2">
+            <span class="form_tit">셀렉트박스</span>
+            <select name="" id="" title="해당항목선택">
+              <option value="">선택 1</option>
+              <option value="">선택 2</option>
+              <option value="">선택 3</option>
+            </select>
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">텍스트인풋</label>
+            <input type="text" id="name">
+          </div>
+          <div class="input__form col2 etc_inp">
+            <label for="name" class="form_tit">버튼하고 같이있을때</label>
+            <input type="text" id="name" class="idinput" style="width: 180px;">
+            <button class="check">중복체크</button>
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">시작일</label>
+            <input type="text" id="date">
+          </div>
+          <div class="input__form col2">
+            <span class="form_tit">발급기관</span>
+            <select name="" id="" title="해당항목선택">
+              <option value="">선택 1</option>
+              <option value="">선택 2</option>
+              <option value="">선택 3</option>
+            </select>
+          </div>
+          <div class="input__form col2">
+            <label for="name" class="form_tit">종료일</label>
+            <input type="text" id="date">
+          </div>
+          
+
+          <div class="input__form">
+            <span class="form_tit">체크박스나열</span>
+            <input type="checkbox" name="check1" id="check1" checked>
+            <label for="check1">Alg00</label>
+            <input type="checkbox" name="check2" id="check2" disabled checked>
+            <label for="check2">Alg02</label>
+            <input type="checkbox" name="check3" id="check3" disabled>
+            <label for="check3">Alg03</label>
+            <input type="checkbox" name="check4" id="check4">
+            <label for="check4">Alg04</label>
+            <input type="checkbox" name="check5" id="check5">
+            <label for="check5">Alg05</label>
+            <input type="checkbox" name="check6" id="check6">
+            <label for="check6">Alg06</label>
+            <input type="checkbox" name="check7" id="check7">
+            <label for="check7">Alg07</label>
+          </div>
+
+
+        </div> <!-- // item end -->
+        <div class="btnArea ac">
+          <a href="#" class="btn__orange">등록</a>
+          <a href="#" class="btn__gray">취소</a>
+        </div>
+      </div> <!-- // 팝업 컨텐츠 끝-->
+    </div>
+  </div>
+
+  <p class="guide">설정화면 인풋</p>
+  <div class="settingInput">
+    <div class="input__form">
+      <span class="form_tit">실시간 이벤트 뷰 Rows</span>
+      <select name="" id="" title="해당항목선택">
+        <option value="">선택 1</option>
+        <option value="">선택 2</option>
+        <option value="">선택 3</option>
+      </select>
+    </div>
+    <div class="input__form">
+      <label for="name" class="form_tit">입력완료시</label>
+      <input type="text" id="name" value="disabled시" disabled>
+    </div>
+    <div class="input__form">
+      <label for="name" class="form_tit">입력완료시</label>
+      <input type="text" id="name" value="">
+    </div>
+  </div>
+
+
+</body>
+
+</html>
